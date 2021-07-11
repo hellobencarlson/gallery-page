@@ -11,9 +11,9 @@ body {
 }
 
 #stats {
-    max-height: 20%;
     text-align: center;
     font-size: 12px;
+    margin: 20px;
 }
 
 header {
@@ -54,18 +54,23 @@ h1 + p {
 #gallery {
     display: grid;
     height: 50%;
-    grid-template-rows: repeat(3, 120px);
-    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, autofit);
+    grid-template-columns: repeat(3, autofi);
     grid-row-gap: 5px;
     grid-column-gap: 5px;
-    margin: 5px;
+    margin: 0 auto;
+    
+}
+
+#gallery-container {
+    display: flex;
+    justify-content: center;
 }
 
 #gallery > img {
     min-height: 100%;
     width: 97%;
     border-radius: 5%;
-    /* overflow: hidden; */
 }
 
 #pic-1 {
@@ -87,7 +92,7 @@ h1 + p {
     grid-row: 2 / 4;
     grid-column: 3 / 4;
 }
-/* 
+
 #pic-5 {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
@@ -96,10 +101,40 @@ h1 + p {
 #pic-6 {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-} */
+} 
 
 footer {
     color: gray;
     text-align: center;
     margin-top: 30px;
+    font-size: 12px;
 }
+
+@media (min-width: 768px) {
+
+    
+    #gallery-container {
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+    }
+
+    header {
+        max-height: 280px;
+    }
+
+    #profile {
+        margin: 20px auto auto auto;
+        max-height: 100px;
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h1 + p {
+        font-size: 14px;
+    }
+}
+
